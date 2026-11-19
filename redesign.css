@@ -573,3 +573,21 @@ body.home-page .hero-slide-clinic-name {
     z-index: 2;
   }
 }
+
+.mobile-menu-booking { display: none; }
+@media (max-width: 700px) {
+  header .nav-actions { display: none; }
+  header .links .mobile-menu-booking {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 6px;
+    justify-content: center;
+    color: #fff;
+    background: var(--purple);
+    border-radius: 999px;
+  }
+  body.home-page header .links .mobile-menu-booking {
+    color: #fff;
+    background: var(--purple);
+  }
+}
