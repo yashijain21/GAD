@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/generate-routes.js",
-    "build": "vite build",
+    "build": "node ./node_modules/vite/bin/vite.js build",
     "postbuild": "node scripts/publish-routes.js",
     "preview": "vite preview"
   },
