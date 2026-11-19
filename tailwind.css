@@ -1,0 +1,5 @@
+@import "tailwindcss/utilities.css";
+
+@source "./App.jsx";
+@source "./index.html";
+@source inline("block");
