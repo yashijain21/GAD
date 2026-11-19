@@ -185,24 +185,30 @@ function App(){
     if(welcomePopup){document.body.classList.add('home-popup-open');welcomePopup.addEventListener('click',onWelcomePopupClick);document.addEventListener('keydown',onWelcomePopupKeydown);welcomeForm?.addEventListener('submit',onWelcomeFormSubmit);window.requestAnimationFrame(()=>welcomeForm?.elements.namedItem('name')?.focus());}
 
     const slides=[
-      {tag:'ORTHOPEDIC CARE',title:'Advanced orthopedic care. Restoring your mobility.',text:'Thoughtful joint and bone care, from your first consultation through the next steps in your recovery.',cta:'Book orthopedic consultation',photo:'/orthopedic-hero-banner.png',photoPosition:'center top',logo:'/joint-replacement-logo.png',logoAlt:'Joint Replacement Clinic logo'},
-      {tag:'IVF & GYNAECOLOGY',title:'Your journey to parenthood starts with care.',text:'Compassionate fertility and women’s health consultations, with a caring team beside you at every step.',cta:'Book IVF consultation',photo:'/ivf-hero-banner.png',photoPosition:'center top',logo:'/little-steps-ivf-logo.png',logoAlt:'Little Steps IVF logo'},
+      {tag:'ORTHOPEDIC CARE',title:'Advanced orthopedic care. Restoring your mobility.',text:'Thoughtful joint and bone care, from your first consultation through the next steps in your recovery.',cta:'Book orthopedic consultation',photo:'/orthopedic-hero-banner.png',mobilePhoto:'/mobile-orthopedic-hero.png',photoPosition:'center top',logo:'/joint-replacement-logo.png',logoAlt:'Joint Replacement Clinic logo'},
+      {tag:'IVF & GYNAECOLOGY',title:'Your journey to parenthood starts with care.',text:'Compassionate fertility and women’s health consultations, with a caring team beside you at every step.',cta:'Book IVF consultation',photo:'/ivf-hero-banner.png',mobilePhoto:'/mobile-ivf-hero.png',photoPosition:'center top',logo:'/little-steps-ivf-logo.png',logoAlt:'Little Steps IVF logo'},
       {tag:'ORTHOPEDIC CARE',title:'Specialist care for stronger movement.',text:'Discuss joint concerns, surgical options and the next steps with an orthopedic specialist.',cta:'Book orthopedic consultation',photo:'photo-1685997180450-242a65624238',logo:'/joint-replacement-logo.png',logoAlt:'Joint Replacement Clinic logo'},
       {tag:'IVF & GYNAECOLOGY',title:'Guidance for every step of your fertility journey.',text:'Explore fertility care and ultrasound consultation with a supportive specialist team.',cta:'Book IVF consultation',photo:'photo-1706065264583-55f1a8549769',logo:'/little-steps-ivf-logo.png',logoAlt:'Little Steps IVF logo'}
     ];
     let activeSlide=0;
+    const mobileHeroQuery=window.matchMedia('(max-width: 700px)');
+    const visibleSlideCount=()=>mobileHeroQuery.matches?2:slides.length;
     const setSlide=n=>{
       if(!document.getElementById('heroTitle'))return;
-      activeSlide=(n+slides.length)%slides.length;const slide=slides[activeSlide];
+      const count=visibleSlideCount();activeSlide=(n+count)%count;const slide=slides[activeSlide];
       document.getElementById('heroTag').textContent=slide.tag;document.getElementById('heroTitle').textContent=slide.title;
       document.getElementById('heroText').textContent=slide.text;document.getElementById('heroCtaLabel').textContent=slide.cta;
-      document.getElementById('heroPhoto').style.backgroundImage=`url('${img(slide.photo)}')`;
+      const photo=mobileHeroQuery.matches?(slide.mobilePhoto||slide.photo):slide.photo;
+      document.getElementById('heroPhoto').style.backgroundImage=`url('${img(photo)}')`;
       document.getElementById('heroPhoto').style.backgroundPosition=slide.photoPosition||'center 46%';
       const slideLogo=document.getElementById('heroSlideLogo');slideLogo.src=slide.logo;slideLogo.alt=slide.logoAlt;
       document.querySelectorAll('.dot').forEach((dot,index)=>dot.classList.toggle('active',index===activeSlide));
     };
+    setSlide(activeSlide);
     const prev=document.getElementById('prev'),next=document.getElementById('next');
     const goPrev=()=>setSlide(activeSlide-1),goNext=()=>setSlide(activeSlide+1);
+    const onHeroBreakpointChange=()=>setSlide(Math.min(activeSlide,visibleSlideCount()-1));
+    mobileHeroQuery.addEventListener?.('change',onHeroBreakpointChange);
     prev?.addEventListener('click',goPrev);next?.addEventListener('click',goNext);
     const dots=Array.from(document.querySelectorAll('.dot'));
     const dotHandlers=dots.map((dot,index)=>{const handler=()=>setSlide(index);dot.addEventListener('click',handler);return {dot,handler};});
@@ -229,6 +235,7 @@ function App(){
       welcomePopup?.removeEventListener('click',onWelcomePopupClick);document.removeEventListener('keydown',onWelcomePopupKeydown);welcomeForm?.removeEventListener('submit',onWelcomeFormSubmit);document.body.classList.remove('home-popup-open');
       links?.querySelectorAll('a').forEach(link=>link.removeEventListener('click',closeMobileMenu));
       prev?.removeEventListener('click',goPrev);next?.removeEventListener('click',goNext);
+      mobileHeroQuery.removeEventListener?.('change',onHeroBreakpointChange);
       dotHandlers.forEach(({dot,handler})=>dot.removeEventListener('click',handler));
       if(carouselTimer!==null)window.clearInterval(carouselTimer);form?.removeEventListener('submit',onSubmit);
       observer.disconnect();window.removeEventListener('scroll',onScroll);
