@@ -10,6 +10,14 @@ These are illustrative stock images, not GAD staff or patients. The listed Unspl
 - IVF homepage banner: `public/ivf-hero-banner.png` (user-supplied image)
 - Orthopedic homepage banner: `public/orthopedic-hero-banner.png` (user-supplied image)
 
+## Clinic and specialist photography used in the redesign
+
+- `public/specialists-combined.png` — clinic-provided specialist image used in the homepage hero.
+- `public/about-clinic.png` — clinic-provided image used in the About section.
+- `public/orthopedic-hero.png` and `public/ivf-hero.png` — clinic-provided specialty imagery used in specialty discovery and gallery sections.
+- `public/dr-parvinder-singh-arora.png` and `public/dr-simrandeep-kaur.png` — original doctor portraits used on the matching clinic profiles.
+- `public/joint-replacement-logo.png` and `public/little-steps-ivf-logo.png` — original specialty brand marks retained in the header and footer.
+
 ## Additional homepage hero photos
 
 - Orthopedic operating-room banner: [A group of doctors performing surgery on a patient](https://unsplash.com/photos/a-group-of-doctors-performing-surgery-on-a-patient-ZuIucrhwHvA) · direct image ID `photo-1715634430473-c5891ff16103` (Unsplash License)
