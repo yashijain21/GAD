@@ -1249,8 +1249,11 @@ body.home-page .hero.home-hero {
   --hero-tone: #e5efea;
   --hero-accent: #216956;
   --hero-ink: #102f27;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: calc(100svh - 78px);
-  padding: 18px 0 34px;
+  padding: 18px 0 20px;
   overflow: visible;
   background: #fff;
 }
@@ -1263,9 +1266,9 @@ body.home-page .hero.home-hero:before { display: none; }
 body.home-page .hero.home-hero .home-hero-inner {
   width: calc(100% - clamp(32px, 3.4vw, 96px));
   max-width: none;
-  height: clamp(540px, calc(100svh - 236px), 900px);
+  height: clamp(560px, calc(100svh - 116px), 900px);
   min-height: 0 !important;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.04fr .96fr;
   gap: clamp(20px, 2vw, 34px);
   padding: clamp(14px, 1.1vw, 22px);
   border-radius: clamp(24px, 2.2vw, 42px);
@@ -1273,12 +1276,13 @@ body.home-page .hero.home-hero .home-hero-inner {
   transition: background .4s ease;
 }
 body.home-page .home-hero-copy {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   max-width: none;
-  padding: clamp(22px, 4.5vw, 78px);
+  padding: clamp(22px, 3.8vw, 64px);
 }
 body.home-page .home-hero-copy .hero-care-badge {
   display: inline-flex;
@@ -1336,6 +1340,18 @@ body.home-page .home-hero-copy .hero-actions .btn.secondary {
   background: transparent;
   color: var(--hero-ink);
 }
+.hero-trust-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 28px);
+  margin-top: auto;
+  padding-top: clamp(26px, 4vh, 54px);
+  color: #43564e;
+  font: 600 13px/1.4 var(--font-ui);
+}
+.hero-trust-items>span { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
+.hero-trust-items .site-icon { color: var(--hero-accent); font-size: 18px; }
 body.home-page .home-hero-image {
   height: 100%;
   min-height: 0;
@@ -1473,12 +1489,10 @@ body.home-page .hero-controls .arrow:last-child { background: var(--hero-ink); c
 @media (max-width: 1000px) {
   body.home-page .home-hero-copy { padding: 30px; }
   body.home-page .home-hero-copy h1 { font-size: clamp(42px, 5vw, 58px) !important; }
-  .hero-appointment-bar { width: calc(100% - 72px); grid-template-columns: 1fr 1.1fr 1fr auto; padding: 14px; }
-  .hero-booking-submit { margin-left: 12px; padding-inline: 18px; }
   .hero-doctor-caption { right: 170px; }
 }
 @media (max-width: 760px) {
-  body.home-page .hero.home-hero { min-height: 0; padding: 14px 0 30px; }
+  body.home-page .hero.home-hero { display: block; min-height: 0; padding: 14px 0 30px; }
   body.home-page .hero.home-hero .home-hero-inner {
     width: calc(100% - 28px);
     height: auto;
@@ -1504,17 +1518,11 @@ body.home-page .hero-controls .arrow:last-child { background: var(--hero-ink); c
   body.home-page .hero-controls { right: 12px; bottom: 12px; gap: 6px; }
   body.home-page .hero-slide-count { margin-right: 3px; font-size: 10px; }
   body.home-page .hero-controls .arrow { width: 36px; height: 36px; }
-  .hero-appointment-bar { width: calc(100% - 44px); grid-template-columns: 1fr 1fr; gap: 18px 0; min-height: 0; margin-top: -20px; padding: 20px 14px 14px; border-radius: 20px; }
-  .hero-appointment-field { padding: 0 10px; }
-  .hero-appointment-field:nth-child(2) { border-right: 0; }
-  .hero-appointment-field:nth-child(3) { padding-left: 10px; }
-  .hero-appointment-field>span { font-size: 8px; }
-  .hero-appointment-field>strong { font-size: 12px; }
-  .hero-booking-submit { grid-column: 1 / -1; min-height: 48px; margin: 0; padding: 13px 18px; font-size: 12px; }
+  .hero-trust-items { gap: 10px 16px; margin-top: 0; padding-top: 20px; font-size: 10px; }
+  .hero-trust-items .site-icon { font-size: 15px; }
 }
 @media (max-width: 430px) {
   body.home-page .home-hero-copy { padding-inline: 7px; }
   body.home-page .home-hero-copy .hero-actions { align-items: flex-start; }
   body.home-page .home-hero-copy .hero-actions .btn { font-size: 10px; }
-  .hero-appointment-bar { width: calc(100% - 34px); }
 }

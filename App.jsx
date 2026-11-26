@@ -1049,8 +1049,6 @@ function App() {
       }
       document.getElementById("heroDoctorName").textContent = slide.doctor;
       document.getElementById("heroDoctorSpecialty").textContent = slide.specialty;
-      document.getElementById("heroBookingSpecialty").textContent = slide.specialty;
-      document.getElementById("heroBookingDoctor").textContent = slide.doctor;
       document.getElementById("heroSlideNumber").textContent = String(activeSlide + 1).padStart(2, "0");
       const heroPhoto = document.getElementById("heroPhoto");
       const photo = mobileHeroQuery.matches

@@ -9,6 +9,7 @@ function homeMarkup({ header, footer }) {
           <h1 id="heroTitle">Thoughtful care. A stronger next step.</h1>
           <p id="heroText">Orthopedic consultations for joint, bone and mobility concerns, with care guided by Dr. Parvinder Singh Arora.</p>
           <div class="hero-actions"><a class="btn" id="heroCta" href="/appointment/"><span id="heroCtaLabel">Book an appointment</span><span data-react-icon="arrow-out"></span></a><a class="btn secondary" href="/specialities/">Explore our specialities <span data-react-icon="arrow-right"></span></a></div>
+          <div class="hero-trust-items"><span><span data-react-icon="medical"></span> Specialist doctors</span><span><span data-react-icon="pulse"></span> Two care teams</span><span><span data-react-icon="pin"></span> Janak Puri</span></div>
         </div>
         <div class="home-hero-image">
           <div class="hero-photo" id="heroPhoto" role="img" aria-label="Orthopedic care at GAD Clinics" style="background-image:url('/orthopedic-hero-banner.png');background-position:center 42%"></div>
@@ -17,12 +18,6 @@ function homeMarkup({ header, footer }) {
           <div class="hero-doctor-caption"><strong id="heroDoctorName">Dr. Parvinder Singh Arora</strong><span id="heroDoctorSpecialty">Orthopedics</span></div>
           <div class="hero-controls"><span class="hero-slide-count"><span id="heroSlideNumber">01</span> / 02</span><button class="arrow" id="prev" aria-label="Previous hero slide"><span data-react-icon="chevron-left"></span></button><div class="dots"><button class="dot active" aria-label="Orthopedic care slide"></button><button class="dot" aria-label="IVF and gynaecology slide"></button></div><button class="arrow" id="next" aria-label="Next hero slide"><span data-react-icon="chevron-right"></span></button></div>
         </div>
-      </div>
-      <div class="hero-appointment-bar" aria-label="Quick appointment details">
-        <div class="hero-appointment-field"><span>Specialty</span><strong id="heroBookingSpecialty">Orthopedics</strong></div>
-        <div class="hero-appointment-field"><span>Doctor</span><strong id="heroBookingDoctor">Dr. Parvinder Singh Arora</strong></div>
-        <a class="hero-appointment-field hero-date-choice" href="/appointment/"><span>Preferred date</span><strong>Choose a date <span data-react-icon="arrow-right"></span></strong></a>
-        <a class="hero-booking-submit" href="/appointment/">Request appointment <span data-react-icon="arrow-out"></span></a>
       </div>
     </section>
 
