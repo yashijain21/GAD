@@ -185,7 +185,7 @@ h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: -.0
 .home-visit-close { position: absolute; top: 17px; right: 17px; display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid #e8e4ee; border-radius: 50%; background: #fff; color: #302653; cursor: pointer; }
 .home-visit-close .site-icon { width: 18px; height: 18px; }
 .home-visit-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.home-visit-form input, .home-visit-form select { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #ded9e8; border-radius: 10px; background: #fff; color: #252238; font: 500 14px 'DM Sans', sans-serif; }
+.home-visit-form input, .home-visit-form select { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #ded9e8; border-radius: 10px; background: #fff; color: #252238; font: 500 14px var(--font-ui); }
 .home-visit-form input:focus, .home-visit-form select:focus { outline: 3px solid #30216f20; border-color: #7650a4; }
 .home-visit-form .btn, .home-visit-form > small, .home-visit-feedback { grid-column: 1 / -1; }
 .home-visit-form .btn { width: 100%; min-height: 48px; margin-top: 2px; }

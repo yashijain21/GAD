@@ -1,4 +1,146 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/treatments/orthopedics",
+      "destination": "/treatments/orthopaedics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/orthopedics/",
+      "destination": "/treatments/orthopaedics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/robotic-joint-replacement",
+      "destination": "/treatments/orthopaedics/robotic-joint-replacement/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/robotic-joint-replacement/",
+      "destination": "/treatments/orthopaedics/robotic-joint-replacement/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/knee-replacement",
+      "destination": "/treatments/orthopaedics/knee-replacement/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/knee-replacement/",
+      "destination": "/treatments/orthopaedics/knee-replacement/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/hip-replacement",
+      "destination": "/treatments/orthopaedics/hip-replacement/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/hip-replacement/",
+      "destination": "/treatments/orthopaedics/hip-replacement/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/fracture-management",
+      "destination": "/treatments/orthopaedics/fracture-management/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/fracture-management/",
+      "destination": "/treatments/orthopaedics/fracture-management/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/joint-pain-relief",
+      "destination": "/treatments/orthopaedics/joint-pain-relief/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/joint-pain-relief/",
+      "destination": "/treatments/orthopaedics/joint-pain-relief/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/arthroscopy",
+      "destination": "/treatments/orthopaedics/arthroscopy/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/arthroscopy/",
+      "destination": "/treatments/orthopaedics/arthroscopy/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/orthopedic-consultation",
+      "destination": "/treatments/orthopaedics/orthopedic-consultation/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/orthopedic-consultation/",
+      "destination": "/treatments/orthopaedics/orthopedic-consultation/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/ivf-treatment",
+      "destination": "/treatments/ivf/ivf-treatment/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/ivf-treatment/",
+      "destination": "/treatments/ivf/ivf-treatment/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/iui-treatment",
+      "destination": "/treatments/ivf/iui-treatment/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/iui-treatment/",
+      "destination": "/treatments/ivf/iui-treatment/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/infertility-care",
+      "destination": "/treatments/ivf/infertility-care/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/infertility-care/",
+      "destination": "/treatments/ivf/infertility-care/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/fertility-evaluation",
+      "destination": "/treatments/ivf/fertility-evaluation/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/fertility-evaluation/",
+      "destination": "/treatments/ivf/fertility-evaluation/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/pregnancy-care",
+      "destination": "/treatments/ivf/pregnancy-care/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/pregnancy-care/",
+      "destination": "/treatments/ivf/pregnancy-care/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/womens-health",
+      "destination": "/treatments/ivf/womens-health/janakpuri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/womens-health/",
+      "destination": "/treatments/ivf/womens-health/janakpuri/",
+      "statusCode": 301
+    }
+  ]
 }

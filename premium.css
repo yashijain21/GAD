@@ -475,8 +475,8 @@ header .nav .mobile-menu-booking { display: none; }
 
 /* Shared type scale and accessible two-specialty treatment navigation. */
 :root {
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-ui: 'DM Sans', Arial, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-ui: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --type-body: clamp(14px, 1vw, 16px);
   --type-nav: 13px;
   --type-label: 10px;
@@ -1005,5 +1005,160 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
   header .nav .brand-logos { gap: 3px; }
   header .nav .brand-logos > img:first-child, header .nav .brand-logos > img:last-child { flex-basis: 19px; width: 19px; height: 19px; }
   header .nav .brand-logos .clinic-name { font-size: 4.2px !important; }
+}
+
+
+/* Treatment pages: spacious editorial layout with the Inter type reference. */
+:root {
+  --font-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-ui: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --treatment-space: clamp(68px, 8vw, 112px);
+}
+body { font-family: var(--font-ui); }
+h1, h2, h3, h4, p, a, button, summary, label, small, span, li { font-family: var(--font-ui); }
+.treatment-service-hero { padding: 22px 0 0; background: #f5f7f6; }
+.treatment-service-hero > .wrap { width: min(1320px, calc(100% - 64px)); }
+.service-breadcrumbs { margin-bottom: 34px; font-size: 12px; gap: 13px; }
+.service-hero-grid { grid-template-columns: minmax(0, 1.02fr) minmax(400px, .98fr); gap: clamp(38px, 6vw, 86px); align-items: center; }
+.service-hero-copy { max-width: 650px; padding: 18px 0 28px; }
+.service-category { border: 0; padding: 10px 14px; border-radius: 999px; background: #e6f3ef; color: #087b53; font-size: 11px; letter-spacing: .09em; }
+.service-category i { background: #087b53; }
+.service-hero-kicker { margin: 19px 0 0; color: #5f706a; font-size: 13px; font-weight: 600; letter-spacing: .01em; }
+.service-hero-copy h1 { max-width: 720px; margin: 10px 0 18px; color: #172c28; font: 700 clamp(42px, 5vw, 64px)/1.08 var(--font-ui) !important; letter-spacing: -.055em; text-wrap: balance; }
+.service-hero-copy h1 span { color: #087b53; }
+.service-hero-description { max-width: 620px; margin: 0; color: #596a64; font-size: clamp(15px, 1.25vw, 17px); line-height: 1.75; }
+.service-hero-actions { gap: 13px; margin-top: 28px; }
+.service-hero-actions .btn { min-height: 54px; padding: 0 22px; border-radius: 8px; background: #087b53; font-size: 13px; }
+.service-hero-actions .btn:hover { background: #066544; }
+.service-hero-actions .btn.secondary { border-color: #cad8d2; color: #21483b; background: #fff; }
+.service-hero-actions .btn.secondary:hover { background: #edf5f1; }
+.service-doctor-note { display: flex; align-items: center; gap: 12px; width: fit-content; margin-top: 24px; padding: 11px 14px 11px 10px; border: 1px solid #e1e8e4; border-radius: 12px; background: #fff; color: #172c28; text-decoration: none; }
+.service-doctor-avatar { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; overflow: hidden; border-radius: 50%; background: #edf2ee; }
+.service-doctor-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.service-doctor-note > span:nth-child(2) { display: grid; gap: 3px; }
+.service-doctor-note strong { font-size: 12px; font-weight: 700; }
+.service-doctor-note small { color: #64736c; font-size: 10px; line-height: 1.4; }
+.service-doctor-arrow { margin-left: 4px; color: #087b53; font-size: 16px; }
+.service-hero-visual { height: clamp(410px, 40vw, 540px); }
+.service-hero-visual > img { border-radius: 22px; object-position: center; box-shadow: 0 24px 54px #192d2821; }
+.service-hero-visual figcaption { top: auto; bottom: 24px; left: 22px; min-width: 230px; gap: 5px; padding: 15px 18px; border: 1px solid #ffffffb8; border-radius: 12px; background: #ffffffed; backdrop-filter: blur(8px); }
+.service-hero-visual figcaption small { color: #087b53; font-size: 9px; letter-spacing: .1em; }
+.service-hero-visual figcaption strong { color: #172c28; font-size: 14px; }
+.service-hero-visual figcaption span { color: #687770; font-size: 10px; }
+.service-image-caption { right: 13px; bottom: 13px; border-radius: 4px; font-size: 8px; }
+.service-hero-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 26px 0 30px; }
+.service-hero-points > span { display: flex; align-items: center; gap: 10px; color: #394b44; font-size: 12px; font-weight: 600; }
+.service-hero-points > span + span { padding-left: 22px; border-left: 1px solid #dbe3de; }
+.service-hero-points i { display: grid; width: 22px; height: 22px; flex: 0 0 22px; place-items: center; border-radius: 50%; color: #087b53; background: #e1f0e9; font-size: 12px; font-style: normal; }
+.treatment-content-section, .treatment-signals-section, .treatment-journey-section, .treatment-planning-section, .treatment-related-section, .treatment-sources-section { padding: var(--treatment-space) 0; }
+.treatment-content-section { background: #fff; }
+.treatment-content-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr); align-items: start; gap: clamp(54px, 9vw, 140px); }
+.treatment-copy-block { max-width: 760px; }
+.treatment-copy-block h2, .treatment-planning-grid h2, .treatment-sources-section h2 { margin: 13px 0 20px; color: #172c28; font: 700 clamp(30px, 3.4vw, 44px)/1.15 var(--font-ui) !important; letter-spacing: -.04em; text-wrap: balance; }
+.treatment-copy-block p, .treatment-planning-grid > div > p { margin: 0 0 18px; color: #576861; font-size: 15px; line-height: 1.85; }
+.treatment-medical-note { margin-top: 24px !important; padding: 15px 18px; border-left: 3px solid #77a58c; background: #f3f7f4; font-size: 12px !important; }
+.treatment-quick-card { display: grid; justify-items: start; padding: 24px; border: 1px solid #e2e9e4; border-radius: 16px; background: #fafcfb; }
+.treatment-quick-card > img { width: 68px; height: 68px; margin: 17px 0 10px; border-radius: 50%; object-fit: cover; object-position: center 18%; }
+.treatment-quick-card h3 { margin: 0 0 6px; color: #172c28; font-size: 17px; font-weight: 700; letter-spacing: -.02em; }
+.treatment-quick-card p { margin: 0 0 10px; color: #66756e; font-size: 11px; line-height: 1.55; }
+.treatment-quick-card .text-link { margin-bottom: 18px; font-size: 11px; }
+.treatment-quick-card .btn { width: 100%; border-radius: 7px; background: #087b53; font-size: 11px; }
+.treatment-signals-section { background: #f5f7f6; }
+.service-section-heading { max-width: 780px; margin: 0 auto 42px; }
+.service-section-heading h2 { margin: 13px 0 14px; color: #172c28; font: 700 clamp(30px, 3.5vw, 44px)/1.15 var(--font-ui) !important; letter-spacing: -.04em; text-wrap: balance; }
+.service-section-heading > p { color: #5f7069; font-size: 14px; line-height: 1.8; }
+.treatment-signal-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; max-width: 960px; margin: 0 auto; }
+.treatment-signal-grid article { display: flex; align-items: flex-start; gap: 17px; min-height: 94px; padding: 22px; border: 1px solid #e2e9e4; border-radius: 12px; background: #fff; }
+.treatment-signal-grid article > span { color: #087b53; font-size: 11px; font-weight: 700; }
+.treatment-signal-grid p { margin: 0; color: #34483f; font-size: 14px; line-height: 1.65; }
+.treatment-journey-section { background: #fff; }
+.treatment-journey-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 42px; max-width: 1000px; padding: 0; margin: 0 auto; list-style: none; counter-reset: none; }
+.treatment-journey-list li { display: grid; grid-template-columns: 40px 1fr; gap: 15px; padding: 22px 0; border-top: 1px solid #e4eae6; }
+.treatment-journey-list li > span { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; color: #087b53; background: #e8f3ed; font-size: 11px; font-weight: 700; }
+.treatment-journey-list h3 { margin: 2px 0 7px; color: #1c342c; font-size: 15px; font-weight: 700; letter-spacing: -.02em; }
+.treatment-journey-list p { margin: 0; color: #64736c; font-size: 12px; line-height: 1.7; }
+.treatment-planning-section { background: #f5f7f6; }
+.treatment-planning-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(280px,.9fr); align-items: center; gap: clamp(42px,8vw,100px); }
+.treatment-planning-grid aside { padding: clamp(25px,4vw,40px); border: 1px solid #e2e9e4; border-radius: 16px; background: #fff; }
+.treatment-planning-grid aside h3 { margin: 12px 0 20px; color: #172c28; font-size: 20px; font-weight: 700; line-height: 1.35; letter-spacing: -.03em; }
+.treatment-planning-grid aside ul { display: grid; gap: 14px; padding: 0; margin: 0; list-style: none; }
+.treatment-planning-grid aside li { position: relative; padding-left: 22px; color: #586a62; font-size: 13px; line-height: 1.55; }
+.treatment-planning-grid aside li:before { position: absolute; top: .43em; left: 0; width: 8px; height: 8px; border-radius: 50%; background: #3d926e; content: ''; }
+.treatment-related-section { padding: var(--treatment-space) 0; background: #fff; }
+.treatment-related-section .service-related-card { border-radius: 12px; }
+.treatment-related-section .service-related-card > img { height: 215px; object-fit: cover; }
+.treatment-related-section .service-related-card h3 { font-size: 18px; font-weight: 700; }
+.service-faq-section { padding: var(--treatment-space) 0; background: #f5f7f6; }
+.service-faq-list { border-color: #dce5df; }
+.service-faq-list details { border-color: #dce5df; }
+.service-faq-list summary { min-height: 68px; font-size: 14px; font-weight: 600; }
+.service-faq-list details p { padding-bottom: 20px; color: #586a62; font-size: 13px; line-height: 1.8; }
+.treatment-sources-section { background: #fff; }
+.treatment-sources-section h2 { font-size: clamp(22px,2.5vw,30px) !important; }
+.treatment-sources-section ul { display: flex; flex-wrap: wrap; gap: 12px; padding: 0; list-style: none; }
+.treatment-sources-section li a { display: inline-flex; align-items: center; gap: 9px; padding: 12px 15px; border: 1px solid #dfe8e2; border-radius: 8px; color: #246146; font-size: 12px; font-weight: 600; }
+.treatment-sources-section li a:hover { background: #f3f7f4; }
+.treatment-sources-section .site-icon { width: 14px; height: 14px; }
+.service-final-cta { padding: 88px 0; background: #172c28; }
+.service-final-cta h2 { max-width: 840px; margin: 14px 0; color: #fff; font: 700 clamp(34px,4.5vw,54px)/1.12 var(--font-ui) !important; letter-spacing: -.045em; }
+.service-final-cta .btn { border-radius: 8px; color: #fff; background: #078354; }
+.service-final-cta .eyebrow { color: #b8d7c7; }
+.service-final-cta > .wrap > p { max-width: 620px; color: #d3e0d9; font-size: 14px; line-height: 1.75; }
+.service-call-link { font-size: 12px; }
+@media (max-width: 900px) {
+  .treatment-service-hero > .wrap { width: min(100% - 40px, 700px); }
+  .service-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(280px, .86fr); gap: 28px; }
+  .service-hero-visual { height: 430px; }
+  .service-hero-copy h1 { font-size: clamp(36px, 5.5vw, 50px) !important; }
+  .service-hero-actions .btn { padding-inline: 15px; }
+}
+@media (max-width: 700px) {
+  .treatment-service-hero { padding-top: 15px; }
+  .treatment-service-hero > .wrap { width: min(100% - 32px, 540px); }
+  .service-breadcrumbs { margin-bottom: 24px; gap: 8px; font-size: 10px; }
+  .service-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .service-hero-copy { padding: 0; }
+  .service-hero-kicker { margin-top: 13px; font-size: 11px; }
+  .service-hero-copy h1 { margin: 10px 0 13px; font-size: clamp(36px, 10vw, 48px) !important; line-height: 1.08; }
+  .service-hero-description { font-size: 13px; line-height: 1.75; }
+  .service-hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+  .service-hero-actions .btn { min-height: 48px; padding: 0 9px; font-size: 10px; }
+  .service-doctor-note { width: 100%; margin-top: 17px; padding: 9px; }
+  .service-doctor-note small { max-width: 250px; }
+  .service-hero-visual { height: auto; aspect-ratio: 1.12 / 1; min-height: 0; }
+  .service-hero-visual > img { border-radius: 15px; }
+  .service-hero-visual figcaption { bottom: 12px; left: 12px; min-width: 180px; padding: 11px 13px; }
+  .service-hero-points { grid-template-columns: 1fr; gap: 12px; padding: 20px 0 22px; }
+  .service-hero-points > span { font-size: 11px; }
+  .service-hero-points > span + span { padding-left: 0; border-left: 0; }
+  .treatment-content-section, .treatment-signals-section, .treatment-journey-section, .treatment-planning-section, .treatment-related-section, .treatment-sources-section, .service-faq-section { padding: 58px 0; }
+  .treatment-content-grid, .treatment-planning-grid { grid-template-columns: 1fr; gap: 28px; }
+  .treatment-copy-block h2, .treatment-planning-grid h2 { margin: 10px 0 15px; font-size: 29px !important; }
+  .treatment-copy-block p, .treatment-planning-grid > div > p { font-size: 13px; line-height: 1.8; }
+  .treatment-quick-card { grid-template-columns: 58px 1fr; align-items: center; column-gap: 12px; padding: 18px; }
+  .treatment-quick-card > .eyebrow, .treatment-quick-card .text-link, .treatment-quick-card .btn { grid-column: 1 / -1; }
+  .treatment-quick-card > img { width: 58px; height: 58px; grid-row: 2 / span 2; margin: 6px 0; }
+  .treatment-quick-card h3 { align-self: end; }
+  .treatment-quick-card p { align-self: start; margin: 0; }
+  .treatment-quick-card .text-link { margin: 10px 0 14px; }
+  .service-section-heading { margin-bottom: 25px; text-align: left; }
+  .service-section-heading h2 { margin: 10px 0; font-size: 29px !important; }
+  .service-section-heading > p { font-size: 12px; line-height: 1.75; }
+  .treatment-signal-grid, .treatment-journey-list { grid-template-columns: 1fr; gap: 10px; }
+  .treatment-signal-grid article { min-height: 0; padding: 17px; }
+  .treatment-signal-grid p { font-size: 12px; }
+  .treatment-journey-list { gap: 0; }
+  .treatment-journey-list li { padding: 17px 0; }
+  .treatment-planning-grid aside { padding: 22px; }
+  .treatment-related-section .service-related-grid { grid-template-columns: 1fr; }
+  .treatment-related-section .service-related-card { grid-template-columns: 112px minmax(0,1fr); }
+  .treatment-related-section .service-related-card > img { width: 112px; height: 100%; min-height: 180px; }
+  .service-faq-list summary { min-height: 60px; font-size: 12px; }
+  .service-final-cta { padding: 58px 0; }
+  .service-final-cta h2 { font-size: 31px !important; }
+  .treatment-sources-section ul { display: grid; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-hero-visual > img, .service-related-card { transition: none; }
 }
 
