@@ -992,6 +992,87 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
   .home-doctor-photo { width: 67px; height: 67px; margin: 0 auto 8px; }
 }
 
+/* Homepage hero: calmer scale and clearer editorial hierarchy. */
+body.home-page .hero.home-hero {
+  background: linear-gradient(112deg, #f7f5ef 0%, #f4f1e9 58%, #edf0e9 100%);
+}
+body.home-page .hero.home-hero .home-hero-inner {
+  height: clamp(410px, 36vw, 500px);
+  grid-template-columns: .92fr 1.08fr;
+  gap: clamp(24px, 3vw, 42px);
+}
+body.home-page .home-hero-copy {
+  max-width: 535px;
+  padding: 28px 0 24px 10px;
+}
+body.home-page .home-hero-copy .eyebrow {
+  color: #607265;
+  font-size: 10px;
+  letter-spacing: .16em;
+}
+body.home-page .home-hero-copy h1 {
+  max-width: 520px;
+  margin: 20px 0 18px;
+  color: #203c35;
+  font: 600 clamp(42px, 4.15vw, 62px)/1.04 var(--font-ui) !important;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+body.home-page .home-hero-copy p {
+  max-width: 440px;
+  margin-bottom: 24px;
+  color: #59665f;
+  font: 400 14px/1.8 var(--font-ui);
+}
+body.home-page .home-hero-copy .hero-actions { gap: 12px; }
+body.home-page .home-hero-copy .hero-actions .btn {
+  min-height: 48px;
+  padding: 13px 18px;
+  border: 1px solid #203c35;
+  border-radius: 6px;
+  font-size: 11px;
+  letter-spacing: .01em;
+}
+body.home-page .home-hero-copy .hero-actions .btn.secondary {
+  border-color: #c6cec3;
+  color: #203c35;
+  background: rgba(255,255,255,.35);
+}
+.hero-trust-items {
+  gap: 18px;
+  margin-top: 23px;
+  color: #54645a;
+  font-size: 10px;
+}
+.hero-trust-items .site-icon { font-size: 14px; }
+body.home-page .home-hero-image {
+  box-shadow: 0 20px 54px rgba(32,60,53,.12);
+}
+body.home-page .home-hero-image:before {
+  box-shadow: 2px 0 0 rgba(255,255,255,.72);
+}
+body.home-page .hero-slide-brand .hero-slide-logo {
+  border-color: rgba(224,228,218,.9);
+  box-shadow: 0 10px 28px rgba(32,60,53,.16);
+}
+body.home-page .hero-controls .arrow {
+  width: 38px;
+  height: 38px;
+  box-shadow: 0 4px 16px rgba(32,60,53,.1);
+}
+@media (max-width: 1000px) {
+  body.home-page .home-hero-copy h1 { font-size: clamp(42px, 5vw, 54px) !important; }
+}
+@media (max-width: 760px) {
+  body.home-page .hero.home-hero .home-hero-inner { height: auto; gap: 0; padding-top: 30px; }
+  body.home-page .home-hero-copy { max-width: 560px; padding: 6px 0 22px; }
+  body.home-page .home-hero-copy h1 { max-width: 500px; margin: 16px 0 13px; font-size: clamp(38px, 9.5vw, 50px) !important; }
+  body.home-page .home-hero-copy p { max-width: 470px; margin-bottom: 18px; font-size: 13px; }
+  body.home-page .home-hero-copy .hero-actions .btn { min-height: 45px; font-size: 10px; }
+  .hero-trust-items { gap: 12px; margin-top: 17px; font-size: 9px; }
+  body.home-page .home-hero-image { box-shadow: 0 14px 32px rgba(32,60,53,.12); }
+}
+
 /* Final phone-header override: keep both logos, the full name and menu on one row. */
 @media (max-width: 760px) {
   header .nav .brand { overflow: hidden; }
