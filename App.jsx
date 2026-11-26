@@ -191,6 +191,7 @@ function treatmentPage(slug){
   const item=treatments[slug];
   if(!item)return treatmentsPage();
   const [name,description]=item;
+  const [photo,alt]=treatmentPhotos[slug];
   const data=treatmentContent[slug];
   const isIvf=ivfTreatmentSlugs.has(slug);
   const specialist=isIvf?doctors.simrandeep:doctors.parvinder;

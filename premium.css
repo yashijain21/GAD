@@ -1024,7 +1024,7 @@ h1, h2, h3, h4, p, a, button, summary, label, small, span, li { font-family: var
 .service-category { border: 0; padding: 10px 14px; border-radius: 999px; background: #e6f3ef; color: #087b53; font-size: 11px; letter-spacing: .09em; }
 .service-category i { background: #087b53; }
 .service-hero-kicker { margin: 19px 0 0; color: #5f706a; font-size: 13px; font-weight: 600; letter-spacing: .01em; }
-.service-hero-copy h1 { max-width: 720px; margin: 10px 0 18px; color: #172c28; font: 700 clamp(42px, 5vw, 64px)/1.08 var(--font-ui) !important; letter-spacing: -.055em; text-wrap: balance; }
+.service-hero-copy h1 { max-width: 720px; margin: 10px 0 18px; color: #172c28; font: 600 clamp(40px, 4.2vw, 60px)/1.08 var(--font-ui) !important; letter-spacing: -.045em; text-wrap: balance; }
 .service-hero-copy h1 span { color: #087b53; }
 .service-hero-description { max-width: 620px; margin: 0; color: #596a64; font-size: clamp(15px, 1.25vw, 17px); line-height: 1.75; }
 .service-hero-actions { gap: 13px; margin-top: 28px; }
@@ -1119,7 +1119,7 @@ h1, h2, h3, h4, p, a, button, summary, label, small, span, li { font-family: var
   .service-hero-grid { grid-template-columns: 1fr; gap: 24px; }
   .service-hero-copy { padding: 0; }
   .service-hero-kicker { margin-top: 13px; font-size: 11px; }
-  .service-hero-copy h1 { margin: 10px 0 13px; font-size: clamp(36px, 10vw, 48px) !important; line-height: 1.08; }
+  .service-hero-copy h1 { margin: 10px 0 13px; font-size: clamp(36px, 10vw, 48px) !important; font-weight: 600 !important; line-height: 1.08; }
   .service-hero-description { font-size: 13px; line-height: 1.75; }
   .service-hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
   .service-hero-actions .btn { min-height: 48px; padding: 0 9px; font-size: 10px; }
