@@ -1526,3 +1526,22 @@ body.home-page .hero-controls .arrow:last-child { background: var(--hero-ink); c
   body.home-page .home-hero-copy .hero-actions { align-items: flex-start; }
   body.home-page .home-hero-copy .hero-actions .btn { font-size: 10px; }
 }
+
+/* Keep the clinician photos inset inside the specialty color panel. */
+@media (min-width: 761px) {
+  body.home-page .hero.home-hero .home-hero-inner { overflow: hidden; }
+  body.home-page .home-hero-image {
+    align-self: center;
+    width: calc(100% - 28px);
+    height: calc(100% - 32px);
+    max-height: 740px;
+    justify-self: center;
+  }
+}
+body.home-page .speciality-tile > img {
+  height: clamp(170px, 14vw, 220px);
+  object-position: center 42%;
+}
+@media (max-width: 760px) {
+  body.home-page .speciality-tile > img { height: clamp(150px, 36vw, 205px); }
+}
