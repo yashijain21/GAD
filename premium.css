@@ -19,28 +19,28 @@
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { color: var(--graphite); background: var(--paper); font-family: Manrope, sans-serif; overflow-x: hidden; }
-h1, h2, h3, h4, .clinic-name { color: var(--forest); font-family: 'Cormorant Garamond', Georgia, serif !important; font-weight: 500 !important; letter-spacing: -.035em; }
+body { color: var(--graphite); background: var(--paper); font-family: var(--font-ui); overflow-x: hidden; }
+h1, h2, h3, h4, .clinic-name { color: var(--forest); font-family: var(--font-display) !important; font-weight: 500 !important; letter-spacing: -.035em; }
 p { color: #616b65; }
 .wrap { width: min(1240px, calc(100% - 64px)); }
-.eyebrow { color: #6e8271; font: 700 10px/1.3 Manrope, sans-serif; letter-spacing: .17em; }
+.eyebrow { color: #6e8271; font: 700 10px/1.3 var(--font-ui); letter-spacing: .17em; }
 .eyebrow:before { width: 19px; background: var(--clay); }
-.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--forest); font: 700 12px Manrope, sans-serif; border-bottom: 1px solid #a7b5a4; padding-bottom: 6px; transition: color .2s, gap .2s; }
+.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--forest); font: 700 12px var(--font-ui); border-bottom: 1px solid #a7b5a4; padding-bottom: 6px; transition: color .2s, gap .2s; }
 .text-link:hover { gap: 13px; color: #69816f; }
-.btn { min-height: 48px; border-radius: 2px; padding: 14px 20px; background: var(--forest); color: white; box-shadow: none; font: 700 11px Manrope, sans-serif; letter-spacing: .025em; transition: background .2s, transform .2s; }
+.btn { min-height: 48px; border-radius: 2px; padding: 14px 20px; background: var(--forest); color: white; box-shadow: none; font: 700 11px var(--font-ui); letter-spacing: .025em; transition: background .2s, transform .2s; }
 .btn:hover { background: #31574d; box-shadow: none; transform: translateY(-2px); }
 .btn.secondary { color: var(--forest); border: 1px solid #b8c1b8; background: transparent; }
 .btn.secondary:hover { background: var(--ivory); }
-.topline { background: var(--forest); color: #e5e9e2; height: 32px; font: 500 10px Manrope, sans-serif; }
+.topline { background: var(--forest); color: #e5e9e2; height: 32px; font: 500 10px var(--font-ui); }
 .topline strong { color: #fff; }
 header, body.home-page header { position: sticky; inset: 0 0 auto; z-index: 30; width: 100%; border: 0; border-bottom: 1px solid #e7e7e1; background: rgba(255,255,255,.97); backdrop-filter: blur(14px); }
 body.home-page header { position: sticky; }
 .nav, body.home-page .nav { width: min(1240px, calc(100% - 64px)); height: 76px; margin: 0 auto; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
-.brand { color: var(--forest); font-family: Manrope, sans-serif; }
+.brand { color: var(--forest); font-family: var(--font-ui); }
 .brand-logos { gap: 8px; }
 .brand-logos img { width: 39px; height: 39px; padding: 2px; border: 1px solid #e5e6e0; border-radius: 50%; }
-.clinic-name { max-width: 210px; color: var(--forest); font: 700 10px/1.15 Manrope, sans-serif !important; letter-spacing: .04em; text-align: left; }
-.links { gap: clamp(11px,1.7vw,24px); color: #434c46; font: 600 11px Manrope, sans-serif; }
+.clinic-name { max-width: 210px; color: var(--forest); font: 700 10px/1.15 var(--font-ui) !important; letter-spacing: .04em; text-align: left; }
+.links { gap: clamp(11px,1.7vw,24px); color: #434c46; font: 600 11px var(--font-ui); }
 .links > a, .dropdown-toggle { position: relative; padding: 10px 0; color: #434c46; font: inherit; }
 .links > a:after { content: ''; position: absolute; right: 0; bottom: 4px; left: 0; height: 1px; background: var(--clay); transform: scaleX(0); transform-origin: left; transition: transform .22s; }
 .links > a:hover:after { transform: scaleX(1); }
@@ -69,7 +69,7 @@ body.home-page .hero, body.home-page .hero.home-hero { min-height: 0; padding: 0
 body.home-page .hero:before { display: none; }
 .home-hero-inner, body.home-page .hero-inner.home-hero-inner { min-height: 570px; display: grid; grid-template-columns: .86fr 1.14fr; align-items: center; gap: clamp(45px,8vw,120px); padding: 54px 0 46px; }
 .home-hero-copy { max-width: 520px; padding: 10px 0; }
-.home-hero-copy h1 { max-width: 560px; margin: 22px 0 18px; color: var(--forest); font: 500 clamp(56px,6vw,82px)/.92 'Cormorant Garamond', Georgia, serif !important; letter-spacing: -.045em; text-wrap: balance; }
+.home-hero-copy h1 { max-width: 560px; margin: 22px 0 18px; color: var(--forest); font: 500 clamp(56px,6vw,82px)/.92 var(--font-display) !important; letter-spacing: -.045em; text-wrap: balance; }
 .home-hero-copy p { max-width: 435px; margin-bottom: 25px; color: #59665f; font-size: 14px; line-height: 1.85; }
 .home-hero-copy .hero-actions { gap: 10px; }
 .home-hero-copy .hero-actions .btn { min-height: 49px; }
@@ -79,18 +79,18 @@ body.home-page .hero:before { display: none; }
 .home-image-note { position: absolute; z-index: 2; bottom: 18px; left: -26px; display: grid; gap: 7px; min-width: 220px; padding: 17px 20px; background: white; box-shadow: 0 12px 32px #203c3618; }
 .home-image-note .eyebrow { font-size: 8px; }
 .home-image-note strong { color: var(--graphite); font-size: 12px; }
-.home-image-note a { color: var(--forest); font: 700 10px Manrope, sans-serif; }
+.home-image-note a { color: var(--forest); font: 700 10px var(--font-ui); }
 .home-image-note a .site-icon { margin-left: 4px; }
 .home-hero-copy .hero-footnote { display: flex; align-items: center; gap: 9px; margin-top: 27px; color: #657068; font-size: 10px; letter-spacing: .035em; }
 .home-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--clay); }
 .home-trust-strip { display: flex; align-items: center; justify-content: space-between; min-height: 68px; border-top: 1px solid #d9ddd5; color: #59665f; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
 .home-trust-strip span, .home-trust-strip a { display: flex; align-items: center; gap: 10px; }
-.home-trust-strip b { color: var(--forest); font: 500 19px 'Cormorant Garamond', Georgia, serif; text-transform: none; }
+.home-trust-strip b { color: var(--forest); font: 500 19px var(--font-display); text-transform: none; }
 
 .section { padding: clamp(75px,9vw,120px) 0; }
 .section.soft { background: var(--ivory); }
 .section h2, .page-hero h1 { color: var(--forest); }
-.section h2 { font: 500 clamp(39px,4.5vw,60px)/.98 'Cormorant Garamond', Georgia, serif !important; letter-spacing: -.035em; }
+.section h2 { font: 500 clamp(39px,4.5vw,60px)/.98 var(--font-display) !important; letter-spacing: -.035em; }
 .section-head { margin-bottom: 44px; }
 .section-head p { max-width: 620px; }
 .home-intro { background: white; }
@@ -114,7 +114,7 @@ body.home-page .hero:before { display: none; }
 .speciality-copy { position: absolute; right: 35px; bottom: 34px; left: 35px; }
 .speciality-copy .eyebrow { color: #d6dfd4; }
 .speciality-copy .eyebrow:before { background: var(--clay); }
-.speciality-copy h3 { max-width: 440px; margin: 17px 0 8px; color: #fff; font: 500 clamp(37px,4vw,51px)/.98 'Cormorant Garamond', Georgia, serif !important; }
+.speciality-copy h3 { max-width: 440px; margin: 17px 0 8px; color: #fff; font: 500 clamp(37px,4vw,51px)/.98 var(--font-display) !important; }
 .speciality-copy p { max-width: 390px; margin: 0 0 20px; color: #f0f0e9; font-size: 12px; line-height: 1.7; }
 .speciality-copy a { display: inline-flex; gap: 8px; align-items: center; color: white; font-size: 10px; font-weight: 700; border-bottom: 1px solid #b7c4b9; padding-bottom: 7px; }
 
@@ -125,8 +125,8 @@ body.home-page .hero:before { display: none; }
 .treatment-link-list { border-top: 1px solid var(--line); }
 .treatment-link-list a { min-height: 64px; display: grid; grid-template-columns: 42px 1fr 20px; align-items: center; gap: 14px; border-bottom: 1px solid var(--line); transition: padding .2s, background .2s; }
 .treatment-link-list a:hover { padding: 0 12px; background: var(--ivory); }
-.treatment-link-list a>span:first-child { color: #9aa89a; font: 500 18px 'Cormorant Garamond', Georgia, serif; }
-.treatment-link-list b { color: var(--forest); font: 600 12px Manrope, sans-serif; }
+.treatment-link-list a>span:first-child { color: #9aa89a; font: 500 18px var(--font-display); }
+.treatment-link-list b { color: var(--forest); font: 600 12px var(--font-ui); }
 .treatment-link-list .site-icon { color: var(--clay); font-size: 14px; }
 
 .home-doctors { background: #f5f1e9; }
@@ -136,7 +136,7 @@ body.home-page .hero:before { display: none; }
 .home-doctor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .5s; }
 .home-doctor-photo:hover img { transform: scale(1.035); }
 .home-doctor>div { align-self: center; }
-.home-doctor h3 { margin: 13px 0 5px; color: var(--forest); font: 500 29px/1 'Cormorant Garamond', Georgia, serif !important; }
+.home-doctor h3 { margin: 13px 0 5px; color: var(--forest); font: 500 29px/1 var(--font-display) !important; }
 .home-doctor p { margin: 0 0 10px; font-size: 11px; line-height: 1.7; }
 .home-doctor small { display: block; margin-bottom: 20px; color: #647068; font-size: 9px; line-height: 1.6; }
 
@@ -146,14 +146,14 @@ body.home-page .hero:before { display: none; }
 .journey-layout>div>p { font-size: 13px; line-height: 1.8; margin-bottom: 24px; }
 .journey-steps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .journey-steps li { display: grid; grid-template-columns: 45px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-.journey-steps li>span { color: var(--clay); font: 500 23px 'Cormorant Garamond', Georgia, serif; }
+.journey-steps li>span { color: var(--clay); font: 500 23px var(--font-display); }
 .journey-steps b { color: var(--forest); font-size: 12px; }
 .journey-steps p { margin: 4px 0 0; font-size: 11px; }
 .home-why { background: var(--ivory); }
 .why-editorial-list { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid #d4d9d0; }
 .why-editorial-list article { display: flex; gap: 15px; padding: 21px 18px 20px 0; border-bottom: 1px solid #d4d9d0; }
-.why-editorial-list article>span { color: var(--clay); font: 500 21px 'Cormorant Garamond', Georgia, serif; }
-.why-editorial-list h3 { margin: 2px 0 7px; color: var(--forest); font: 500 23px/1.05 'Cormorant Garamond', Georgia, serif !important; }
+.why-editorial-list article>span { color: var(--clay); font: 500 21px var(--font-display); }
+.why-editorial-list h3 { margin: 2px 0 7px; color: var(--forest); font: 500 23px/1.05 var(--font-display) !important; }
 .why-editorial-list p { margin: 0; font-size: 10px; line-height: 1.65; }
 
 .home-gallery { background: var(--ivory); }
@@ -168,7 +168,7 @@ body.home-page .hero:before { display: none; }
 .home-review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .home-review-grid blockquote { margin: 0; min-height: 240px; display: flex; flex-direction: column; padding: 28px 30px; border: 1px solid var(--line); background: #fff; }
 .review-stars { color: #a47758; font-size: 13px; letter-spacing: .14em; }
-.home-review-grid blockquote p { flex: 1; margin: 16px 0 23px; color: #4d5851; font: 400 19px/1.45 'Cormorant Garamond', Georgia, serif; }
+.home-review-grid blockquote p { flex: 1; margin: 16px 0 23px; color: #4d5851; font: 400 19px/1.45 var(--font-display); }
 .home-review-grid blockquote footer { display: flex; justify-content: space-between; gap: 15px; color: var(--forest); font-size: 10px; font-weight: 700; }
 .home-review-grid blockquote footer span { color: #7a847d; font-weight: 500; }
 .disclaimer { color: #737c75; font-size: 10px; }
@@ -185,7 +185,7 @@ body.home-page .hero:before { display: none; }
 
 .home-final-cta { padding: 64px 0; background: var(--forest); }
 .home-final-cta .wrap { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
-.home-final-cta h2 { margin: 14px 0 9px; color: white; font: 500 clamp(39px,5vw,58px)/.98 'Cormorant Garamond', Georgia, serif !important; }
+.home-final-cta h2 { margin: 14px 0 9px; color: white; font: 500 clamp(39px,5vw,58px)/.98 var(--font-display) !important; }
 .home-final-cta p { margin: 0; color: #d1dbd3; font-size: 12px; }
 .home-final-cta .eyebrow { color: #c0cfc2; }
 .home-final-cta .btn { background: white; color: var(--forest); flex: 0 0 auto; }
@@ -193,40 +193,40 @@ body.home-page .hero:before { display: none; }
 /* Shared inner page treatment */
 .page-hero { padding: 56px 0 58px; background: var(--ivory); }
 .page-hero .wrap { max-width: 1240px; }
-.breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; color: #717c73; font: 500 10px Manrope, sans-serif; text-transform: capitalize; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; color: #717c73; font: 500 10px var(--font-ui); text-transform: capitalize; }
 .breadcrumbs a:hover { color: var(--forest); text-decoration: underline; text-underline-offset: 3px; }
-.page-hero h1 { max-width: 850px; margin: 15px 0 12px; font: 500 clamp(47px,6vw,75px)/.95 'Cormorant Garamond', Georgia, serif !important; letter-spacing: -.04em; }
+.page-hero h1 { max-width: 850px; margin: 15px 0 12px; font: 500 clamp(47px,6vw,75px)/.95 var(--font-display) !important; letter-spacing: -.04em; }
 .page-hero p { max-width: 640px; font-size: 13px; line-height: 1.8; }
 .about-specialties { gap: 18px; }
 .about-specialty, .visit-step, .contact-card, .credential-box { border-radius: 2px; border-color: var(--line); box-shadow: none; background: white; }
 .about-specialty.ivf-about { background: white; }
 .about-specialty-icon { border-radius: 2px; color: var(--forest); background: var(--ivory); }
 .ivf-about .about-specialty-icon { color: var(--forest); background: #e5ebe3; }
-.about-specialty h3 { color: var(--forest); font: 500 30px 'Cormorant Garamond', Georgia, serif !important; }
+.about-specialty h3 { color: var(--forest); font: 500 30px var(--font-display) !important; }
 .ivf-about .eyebrow { color: #6e8271; }
 .doctor-card { border: 1px solid var(--line); border-radius: 2px; box-shadow: none; background: white; }
-.doctor-info h3 { color: var(--forest); font: 500 30px 'Cormorant Garamond', Georgia, serif !important; }
+.doctor-info h3 { color: var(--forest); font: 500 30px var(--font-display) !important; }
 .doctor-info .btn { border-radius: 2px; }
 .doctor-img { background-color: #e6eae3; }
 .treatment-grid { gap: 16px; }
 .treatment-card { border: 1px solid var(--line); border-radius: 2px; box-shadow: none; }
 .treatment-card:hover { transform: translateY(-3px); border-color: var(--sage); box-shadow: 0 12px 32px #203c3610; }
-.treatment-card h3 { color: var(--forest); font: 500 24px 'Cormorant Garamond', Georgia, serif !important; }
+.treatment-card h3 { color: var(--forest); font: 500 24px var(--font-display) !important; }
 .treatment-mark { border-radius: 2px; color: var(--forest); background: var(--ivory); }
 .treatment-card-copy { padding: 20px; }
 .treatment-aside, .booking-cta { border-radius: 2px; background: var(--ivory); }
 .profile-hero { background: var(--ivory); }
-.profile-summary h1 { color: var(--forest); font: 500 clamp(46px,5vw,69px)/.97 'Cormorant Garamond', Georgia, serif !important; }
+.profile-summary h1 { color: var(--forest); font: 500 clamp(46px,5vw,69px)/.97 var(--font-display) !important; }
 .profile-photo { border-radius: 2px; box-shadow: none; }
 .credential-box { padding: 25px; }
-.credential-box h3 { color: var(--forest); font: 500 30px 'Cormorant Garamond', Georgia, serif !important; }
+.credential-box h3 { color: var(--forest); font: 500 30px var(--font-display) !important; }
 .profile-cta .btn { border-radius: 2px; }
 .contact-card { padding: 30px; }
-.contact-card h2 { font: 500 34px 'Cormorant Garamond', Georgia, serif !important; }
+.contact-card h2 { font: 500 34px var(--font-display) !important; }
 .contact-row { gap: 13px; }
 .contact-row b { color: var(--forest); }
 .contact-row a { color: var(--forest); text-decoration: underline; text-underline-offset: 3px; }
-.contact-form-wrap h2 { color: var(--forest); font: 500 48px 'Cormorant Garamond', Georgia, serif !important; }
+.contact-form-wrap h2 { color: var(--forest); font: 500 48px var(--font-display) !important; }
 .form input, .form select, .form textarea { border: 1px solid #d9ddd5; border-radius: 2px; background: white; color: var(--graphite); }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid #a7b5a466; border-color: #708873; }
 .form .btn { border-radius: 2px; }
@@ -235,7 +235,7 @@ body.home-page .hero:before { display: none; }
 .appointment-contact .site-icon { color: #718675; }
 .footer-grid { gap: 36px; }
 footer { background: var(--forest-deep); }
-.footer-grid h4 { color: #f2f3ed; font: 600 19px 'Cormorant Garamond', Georgia, serif !important; }
+.footer-grid h4 { color: #f2f3ed; font: 600 19px var(--font-display) !important; }
 .footer-grid, .footer-grid a, .footer-grid span, .footer-about p { color: #c6d1c7; }
 .footer-grid .footer-contact .site-icon { color: #c2d1c3; }
 .footer-about .clinic-name { color: white; }
@@ -262,7 +262,7 @@ footer { background: var(--forest-deep); }
 .specialty-treatment-list a:hover { padding-left: 8px; background: #ffffff80; }
 .reviews-page-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
 .review-page-card { min-height: 285px; display: flex; flex-direction: column; padding: 23px; border: 1px solid var(--line); background: white; }
-.review-page-card blockquote { flex: 1; margin: 15px 0 20px; color: #4d5851; font: 400 17px/1.45 'Cormorant Garamond', Georgia, serif; }
+.review-page-card blockquote { flex: 1; margin: 15px 0 20px; color: #4d5851; font: 400 17px/1.45 var(--font-display); }
 .reviewer-name { display: flex; justify-content: space-between; gap: 8px; color: var(--forest); font-size: 10px; font-weight: 700; }
 .reviewer-name span { color: #7b837e; font-weight: 500; }
 .review-page-card>a { display: inline-flex; align-items: center; gap: 7px; margin-top: 15px; color: var(--forest); font-size: 9px; text-decoration: underline; text-underline-offset: 3px; }
@@ -296,7 +296,7 @@ header .nav .brand-logos .clinic-name {
   min-width: 0;
   max-width: none;
   color: var(--forest);
-  font: 600 10.5px/1.05 Manrope, sans-serif !important;
+  font: 600 10.5px/1.05 var(--font-ui) !important;
   letter-spacing: .015em;
   white-space: nowrap;
   overflow-wrap: normal;
@@ -311,7 +311,7 @@ header .nav .links {
   gap: clamp(12px, 1.15vw, 22px);
   padding: 0;
   color: #434c46;
-  font: 600 12px/1 Manrope, sans-serif;
+  font: 600 12px/1 var(--font-ui);
   white-space: nowrap;
   background: transparent;
   box-shadow: none;
@@ -334,7 +334,7 @@ header .nav .links > a[aria-current="page"] { color: var(--forest); }
 header .nav .links > a[aria-current="page"]:after { transform: scaleX(1); }
 header .nav .nav-dropdown { position: relative; display: flex; flex: 0 0 auto; align-items: center; height: 78px; }
 header .nav .dropdown-menu { top: calc(100% - 4px); left: -18px; border-top: 2px solid var(--clay); border-radius: 0 0 8px 8px; }
-header .nav .dropdown-menu a { font: 500 12px/1.3 Manrope, sans-serif; }
+header .nav .dropdown-menu a { font: 500 12px/1.3 var(--font-ui); }
 header .nav .nav-actions { display: flex; flex: 0 0 auto; align-items: center; }
 header .nav .nav-actions .btn, header .nav .mobile-menu-booking {
   min-height: 44px;
@@ -343,7 +343,7 @@ header .nav .nav-actions .btn, header .nav .mobile-menu-booking {
   border-radius: 7px;
   background: var(--forest);
   color: #fff;
-  font: 700 12px/1 Manrope, sans-serif;
+  font: 700 12px/1 var(--font-ui);
   white-space: nowrap;
   transition: background .2s ease, transform .2s ease;
 }
@@ -371,14 +371,14 @@ header .nav .mobile-menu-booking { display: none; }
 
 /* Editorial treatment detail pages inspired by the supplied service-page reference. */
 .treatment-service-hero { padding: 22px 0 76px; background: #f4efe6; }
-.service-breadcrumbs { display: flex; align-items: center; gap: 11px; margin: 0 0 32px; color: #66706a; font: 500 11px Manrope, sans-serif; }
+.service-breadcrumbs { display: flex; align-items: center; gap: 11px; margin: 0 0 32px; color: #66706a; font: 500 11px var(--font-ui); }
 .service-breadcrumbs span[aria-current="page"] { color: var(--forest); font-weight: 700; }
 .service-breadcrumbs > span:not([aria-current]) { color: #b2aa9d; }
 .service-hero-grid { display: grid; grid-template-columns: minmax(0, .96fr) minmax(390px, .9fr); align-items: center; gap: clamp(52px, 7vw, 110px); }
 .service-hero-copy { max-width: 660px; padding: 15px 0; }
-.service-category { display: inline-flex; align-items: center; gap: 10px; padding: 9px 15px; border: 1px solid #e4ddcf; border-radius: 99px; color: var(--forest); background: #fffdfa; font: 700 10px Manrope, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.service-category { display: inline-flex; align-items: center; gap: 10px; padding: 9px 15px; border: 1px solid #e4ddcf; border-radius: 99px; color: var(--forest); background: #fffdfa; font: 700 10px var(--font-ui); letter-spacing: .12em; text-transform: uppercase; }
 .service-category i { width: 7px; height: 7px; border-radius: 50%; background: #81916f; }
-.service-hero-copy h1 { max-width: 700px; margin: 26px 0 18px; color: var(--forest); font: 500 clamp(44px, 5.5vw, 74px)/.99 Manrope, sans-serif !important; letter-spacing: -.055em; }
+.service-hero-copy h1 { max-width: 700px; margin: 26px 0 18px; color: var(--forest); font: 500 clamp(44px, 5.5vw, 74px)/.99 var(--font-ui) !important; letter-spacing: -.055em; }
 .service-hero-copy > p { max-width: 620px; margin: 0; color: #5e665f; font-size: clamp(14px, 1.25vw, 18px); line-height: 1.75; }
 .service-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .service-hero-actions .btn { min-height: 52px; padding: 0 23px; border-radius: 99px; background: var(--forest); }
@@ -388,23 +388,23 @@ header .nav .mobile-menu-booking { display: none; }
 .service-hero-visual { position: relative; min-width: 0; height: clamp(450px, 45vw, 650px); margin: 0; }
 .service-hero-visual > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 26px; box-shadow: 0 22px 50px #203c3610; }
 .service-hero-visual figcaption { position: absolute; top: 38px; left: -24px; display: grid; gap: 8px; min-width: 220px; padding: 20px 24px; border-radius: 14px; background: #fffdfa; box-shadow: 0 12px 32px #203c3617; }
-.service-hero-visual figcaption small { color: #8a765e; font: 700 9px Manrope, sans-serif; letter-spacing: .18em; }
-.service-hero-visual figcaption strong { color: var(--forest); font: 600 15px Manrope, sans-serif; }
-.service-image-caption { position: absolute; right: 18px; bottom: 17px; padding: 6px 9px; border-radius: 4px; color: white; background: #182f2b9c; font: 600 8px Manrope, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.service-hero-visual figcaption small { color: #8a765e; font: 700 9px var(--font-ui); letter-spacing: .18em; }
+.service-hero-visual figcaption strong { color: var(--forest); font: 600 15px var(--font-ui); }
+.service-image-caption { position: absolute; right: 18px; bottom: 17px; padding: 6px 9px; border-radius: 4px; color: white; background: #182f2b9c; font: 600 8px var(--font-ui); letter-spacing: .12em; text-transform: uppercase; }
 .service-discussion-section, .service-related-section { padding: 86px 0; background: #fbf8f2; }
 .service-section-heading { max-width: 760px; margin: 0 auto 36px; text-align: center; }
 .service-section-heading .eyebrow { justify-content: center; }
-.service-section-heading h2, .service-approach-grid h2, .service-final-cta h2 { margin: 13px 0 12px; color: var(--forest); font: 500 clamp(34px, 4vw, 54px)/1.05 Manrope, sans-serif !important; letter-spacing: -.045em; }
+.service-section-heading h2, .service-approach-grid h2, .service-final-cta h2 { margin: 13px 0 12px; color: var(--forest); font: 500 clamp(34px, 4vw, 54px)/1.05 var(--font-ui) !important; letter-spacing: -.045em; }
 .service-section-heading > p { max-width: 720px; margin: 0 auto; color: #657068; font-size: 14px; line-height: 1.75; }
 .service-topic-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.service-topic-list > span { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid #e7dfd2; border-radius: 99px; color: #34453d; background: #fffdfa; font: 600 12px Manrope, sans-serif; }
+.service-topic-list > span { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid #e7dfd2; border-radius: 99px; color: #34453d; background: #fffdfa; font: 600 12px var(--font-ui); }
 .service-approach-section { padding: 90px 0; background: #fffdfa; }
 .service-approach-grid { display: grid; grid-template-columns: 1fr .92fr; align-items: center; gap: clamp(50px, 8vw, 120px); }
 .service-approach-grid > div > p { max-width: 620px; color: #5e665f; font-size: 14px; line-height: 1.8; }
 .service-approach-grid .text-link { margin-top: 12px; }
 .service-visit-card { padding: clamp(26px, 4vw, 46px); border: 1px solid #e9dfce; border-radius: 22px; background: #f4eee2; }
 .service-visit-card .eyebrow { color: #89745c; }
-.service-visit-card h3 { margin: 12px 0 20px; color: var(--forest); font: 500 27px/1.1 Manrope, sans-serif !important; letter-spacing: -.035em; }
+.service-visit-card h3 { margin: 12px 0 20px; color: var(--forest); font: 500 27px/1.1 var(--font-ui) !important; letter-spacing: -.035em; }
 .service-visit-card ul { display: grid; gap: 14px; padding: 0; margin: 0; list-style: none; }
 .service-visit-card li { position: relative; padding-left: 24px; color: #414b44; font-size: 13px; line-height: 1.5; }
 .service-visit-card li:before { content: ''; position: absolute; top: .45em; left: 0; width: 9px; height: 9px; border: 2px solid #8b9a77; border-radius: 50%; background: #f4eee2; }
@@ -413,8 +413,8 @@ header .nav .mobile-menu-booking { display: none; }
 .service-related-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px #203c3612; }
 .service-related-card > img { display: block; width: 100%; height: 220px; object-fit: cover; }
 .service-related-card > div { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 21px; }
-.service-related-card small { color: #788a70; font: 700 9px Manrope, sans-serif; letter-spacing: .14em; }
-.service-related-card h3 { margin: 10px 0 7px; color: var(--forest); font: 600 20px Manrope, sans-serif !important; letter-spacing: -.03em; }
+.service-related-card small { color: #788a70; font: 700 9px var(--font-ui); letter-spacing: .14em; }
+.service-related-card h3 { margin: 10px 0 7px; color: var(--forest); font: 600 20px var(--font-ui) !important; letter-spacing: -.03em; }
 .service-related-card p { flex: 1; margin: 0 0 16px; color: #66706a; font-size: 12px; line-height: 1.65; }
 .service-related-card .text-link { font-size: 11px; }
 .service-related-section .disclaimer { margin: 22px 0 0; text-align: center; }
@@ -422,7 +422,7 @@ header .nav .mobile-menu-booking { display: none; }
 .service-faq-section .service-section-heading { margin-bottom: 28px; }
 .service-faq-list { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--line); }
 .service-faq-list details { padding: 0; border-bottom: 1px solid var(--line); }
-.service-faq-list summary { align-items: center; gap: 15px; min-height: 64px; color: var(--forest); font: 600 14px Manrope, sans-serif; }
+.service-faq-list summary { align-items: center; gap: 15px; min-height: 64px; color: var(--forest); font: 600 14px var(--font-ui); }
 .service-faq-list .faq-toggle-icon { flex: 0 0 auto; color: #829276; }
 .service-faq-list details p { max-width: 760px; margin: 0; padding: 0 34px 19px 0; color: #626b64; font-size: 13px; line-height: 1.7; }
 .service-final-cta { padding: 76px 0; text-align: center; background: var(--forest-deep); }
@@ -473,6 +473,71 @@ header .nav .mobile-menu-booking { display: none; }
   .service-final-cta > .wrap > p { font-size: 12px; }
 }
 
+/* Shared type scale and accessible two-specialty treatment navigation. */
+:root {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-ui: 'DM Sans', Arial, sans-serif;
+  --type-body: clamp(14px, 1vw, 16px);
+  --type-nav: 13px;
+  --type-label: 10px;
+}
+body { font-family: var(--font-ui); font-size: var(--type-body); }
+h1, h2, h3, h4, .clinic-name { font-family: var(--font-display) !important; font-weight: 400 !important; }
+p, nav, button, input, select, textarea, .btn, .breadcrumbs, .service-breadcrumbs { font-family: var(--font-ui); }
+.home-hero-copy h1 { font-size: clamp(42px, 5vw, 68px) !important; line-height: 1.03; letter-spacing: -.025em; }
+.service-hero-copy h1 { font: 400 clamp(40px, 5vw, 68px)/1.02 var(--font-display) !important; letter-spacing: -.025em; }
+.service-section-heading h2, .service-approach-grid h2, .service-final-cta h2 { font: 400 clamp(32px, 3.8vw, 50px)/1.08 var(--font-display) !important; letter-spacing: -.02em; }
+.treatments-dropdown { position: static !important; }
+.treatments-mega-menu { position: absolute; top: calc(100% - 1px) !important; right: max(24px, calc((100vw - 1240px)/2)); left: max(24px, calc((100vw - 1240px)/2)) !important; z-index: 50; display: none; width: auto !important; max-height: min(78vh, 720px); overflow: auto; padding: 26px 30px 18px !important; border: 1px solid #e5e6e0 !important; border-top: 2px solid var(--clay) !important; border-radius: 0 0 18px 18px !important; background: #fffdfa !important; box-shadow: 0 24px 65px #203c3620 !important; white-space: normal; animation: mega-enter .18s ease-out both; }
+.treatments-dropdown:hover .treatments-mega-menu, .treatments-dropdown:focus-within .treatments-mega-menu, .treatments-mega-menu.is-open { display: block; }
+.mega-specialties { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+.mega-specialty { min-width: 0; padding: 0 10px 8px; }
+.mega-specialty + .mega-specialty { border-left: 1px solid #e8e5dd; padding-left: 30px; }
+.mega-specialty-heading { display: grid; gap: 5px; padding: 0 0 12px; cursor: pointer; list-style: none; }
+.mega-specialty-heading::-webkit-details-marker { display: none; }
+.mega-specialty-heading .eyebrow { margin-bottom: 4px; color: #768674; }
+.mega-doctor { color: var(--forest); font: 600 15px/1.35 var(--font-ui); }
+.mega-designation { color: #737a74; font: 400 11px/1.5 var(--font-ui); white-space: normal; }
+.mega-doctor-profile { display: inline-flex !important; padding: 0 0 11px !important; color: #6b7f69 !important; font: 600 10px/1.4 var(--font-ui) !important; }
+.mega-treatment-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 3px 14px; }
+.mega-treatment-links a { display: flex !important; align-items: center; justify-content: space-between; gap: 8px; min-height: 38px; padding: 8px 10px !important; border-radius: 7px; color: #354a40 !important; background: transparent; font: 500 11px/1.35 var(--font-ui) !important; white-space: normal; }
+.mega-treatment-links a:hover, .mega-treatment-links a:focus-visible { color: #7b5e4c !important; background: #f4f1e9 !important; }
+.mega-treatment-links .site-icon, .mega-overview-link .site-icon, .mega-all-link .site-icon { width: 12px; height: 12px; flex: 0 0 auto; }
+.mega-all-link { display: inline-flex !important; align-items: center; gap: 8px; margin-top: 12px; padding: 8px 0 !important; color: var(--forest) !important; font: 600 11px/1.4 var(--font-ui) !important; }
+.mega-overview-link { display: flex !important; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; padding: 15px 0 2px !important; border-top: 1px solid #e5e6e0; color: var(--forest) !important; font: 600 12px var(--font-ui) !important; }
+.mega-specialty summary:focus-visible, .mega-specialty a:focus-visible, .mega-overview-link:focus-visible { outline: 2px solid #7c9885; outline-offset: 3px; }
+@keyframes mega-enter { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 900px) and (min-width: 761px) {
+  .treatments-mega-menu { right: 16px; left: 16px !important; padding: 20px 18px 14px !important; }
+  .mega-specialties { gap: 16px; }
+  .mega-specialty + .mega-specialty { padding-left: 18px; }
+  .mega-treatment-links { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .treatments-dropdown { width: 100%; height: auto !important; display: block !important; }
+  .treatments-mega-menu, .treatments-dropdown:hover .treatments-mega-menu, .treatments-dropdown:focus-within .treatments-mega-menu { position: static !important; display: none; width: 100% !important; max-height: min(65vh, 580px); overflow-y: auto; padding: 10px 12px !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: #f7f5ef !important; animation: none; }
+  .treatments-dropdown .treatments-mega-menu.is-open { display: block; }
+  .mega-specialties { grid-template-columns: 1fr; gap: 4px; }
+  .mega-specialty { padding: 0 0 8px; border-bottom: 1px solid #e2e1d9; }
+  .mega-specialty + .mega-specialty { padding: 0 0 8px; border-left: 0; }
+  .mega-specialty-heading { position: relative; padding: 10px 24px 10px 0; }
+  .mega-specialty-heading:after { position: absolute; top: 18px; right: 4px; content: '+'; color: #768674; font: 500 19px/1 var(--font-ui); }
+  .mega-specialty[open] > .mega-specialty-heading:after { content: '−'; }
+  .mega-specialty:not([open]) > :not(summary) { display: none !important; }
+  .mega-doctor { font-size: 14px; }
+  .mega-treatment-links { grid-template-columns: 1fr; gap: 0; }
+  .mega-treatment-links a { min-height: 42px; font-size: 12px !important; }
+  .mega-overview-link { min-height: 44px; }
+}
+@media (max-width: 700px) {
+  .service-hero-copy h1 { font-size: clamp(36px, 10vw, 48px) !important; }
+  .home-hero-copy h1 { font-size: clamp(39px, 10vw, 52px) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
 /* Doctors directory profile cards. */
 .doctor-directory-section { padding: 78px 0 82px; background: #f7f4ed; }
 .doctor-directory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
@@ -481,21 +546,21 @@ header .nav .mobile-menu-booking { display: none; }
 .doctor-directory-photo:after { position: absolute; inset: 45% 0 0; content: ''; background: linear-gradient(transparent, #172f2c65); }
 .doctor-directory-photo img { display: block; width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center 18%; transition: transform .45s ease; }
 .doctor-directory-card:hover .doctor-directory-photo img { transform: scale(1.025); }
-.doctor-directory-photo > span { position: absolute; z-index: 1; bottom: 18px; left: 18px; color: #fff; font: 700 9px Manrope, sans-serif; letter-spacing: .14em; }
+.doctor-directory-photo > span { position: absolute; z-index: 1; bottom: 18px; left: 18px; color: #fff; font: 700 9px var(--font-ui); letter-spacing: .14em; }
 .doctor-directory-info { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; padding: clamp(23px, 2.6vw, 36px); }
 .doctor-directory-info > .eyebrow { margin-bottom: 8px; font-size: 9px; }
-.doctor-directory-info h2 { margin: 0; color: var(--forest); font: 500 clamp(25px, 2.15vw, 32px)/1.02 'Cormorant Garamond', Georgia, serif !important; letter-spacing: -.025em; }
+.doctor-directory-info h2 { margin: 0; color: var(--forest); font: 500 clamp(25px, 2.15vw, 32px)/1.02 var(--font-display) !important; letter-spacing: -.025em; }
 .doctor-directory-info h2 a { color: inherit; }
 .doctor-directory-title { margin: 9px 0 15px; color: #4f5e55; font-size: 12px; line-height: 1.55; }
 .doctor-directory-credentials { padding: 11px 0; border-top: 1px solid #e9e7df; border-bottom: 1px solid #e9e7df; color: #657068; font-size: 10px; line-height: 1.55; }
-.doctor-directory-experience { display: inline-flex; align-items: center; gap: 8px; margin: 15px 0 4px; padding: 8px 11px; border-radius: 99px; color: var(--forest); background: #eff2eb; font: 700 10px Manrope, sans-serif; }
+.doctor-directory-experience { display: inline-flex; align-items: center; gap: 8px; margin: 15px 0 4px; padding: 8px 11px; border-radius: 99px; color: var(--forest); background: #eff2eb; font: 700 10px var(--font-ui); }
 .doctor-directory-experience .site-icon { width: 14px; height: 14px; color: #788a70; }
 .doctor-directory-intro { margin: 9px 0 16px; color: #647068; font-size: 11px; line-height: 1.65; }
 .doctor-directory-areas { display: flex; flex-wrap: wrap; gap: 6px; margin: auto 0 20px; }
-.doctor-directory-areas > span { padding: 6px 8px; border: 1px solid #e4e7df; border-radius: 4px; color: #556259; font: 600 8px/1.2 Manrope, sans-serif; }
+.doctor-directory-areas > span { padding: 6px 8px; border: 1px solid #e4e7df; border-radius: 4px; color: #556259; font: 600 8px/1.2 var(--font-ui); }
 .doctor-directory-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; width: 100%; }
 .doctor-directory-actions .btn { min-height: 42px; padding: 0 15px; border-radius: 5px; font-size: 10px; }
-.doctor-directory-book { color: var(--forest); font: 700 10px Manrope, sans-serif; text-decoration: underline; text-decoration-color: #b7c5b6; text-underline-offset: 4px; }
+.doctor-directory-book { color: var(--forest); font: 700 10px var(--font-ui); text-decoration: underline; text-decoration-color: #b7c5b6; text-underline-offset: 4px; }
 .doctor-directory-note { margin: 20px 0 0; color: #758077; font-size: 10px; text-align: center; }
 @media (max-width: 1100px) {
   .doctor-directory-grid { grid-template-columns: 1fr; gap: 18px; max-width: 850px; margin: 0 auto; }
@@ -600,7 +665,7 @@ header .nav .mobile-menu-booking { display: none; }
     margin-bottom: 4px;
     border-bottom: 1px solid var(--line);
     color: var(--forest);
-    font: 600 12px Manrope, sans-serif;
+    font: 600 12px var(--font-ui);
   }
   header .nav .mobile-ivf-identity img { width: 42px; height: 42px; object-fit: contain; }
 }
@@ -736,8 +801,8 @@ body.home-page .hero.home-hero { min-height: 0 !important; padding: 0; backgroun
 body.home-page .hero.home-hero .home-hero-inner { min-height: 0 !important; height: clamp(390px, 37vw, 520px); grid-template-columns: .9fr 1.1fr; gap: 30px; padding: 0; }
 body.home-page .home-hero-copy { position: relative; z-index: 3; max-width: 560px; padding: 26px 0 20px 10px; }
 body.home-page .home-hero-copy .eyebrow { color: #4f5c52; }
-body.home-page .home-hero-copy h1 { max-width: 590px; margin: 17px 0 13px; color: var(--forest); font: 500 clamp(54px,6.1vw,88px)/.87 'Cormorant Garamond',Georgia,serif !important; letter-spacing: -.045em; text-wrap: balance; }
-body.home-page .home-hero-copy p { max-width: 415px; margin: 0 0 17px; color: #303b35; font: 400 12px/1.75 Manrope,sans-serif; }
+body.home-page .home-hero-copy h1 { max-width: 590px; margin: 17px 0 13px; color: var(--forest); font: 500 clamp(54px,6.1vw,88px)/.87 var(--font-display) !important; letter-spacing: -.045em; text-wrap: balance; }
+body.home-page .home-hero-copy p { max-width: 415px; margin: 0 0 17px; color: #303b35; font: 400 12px/1.75 var(--font-ui); }
 body.home-page .home-hero-copy .hero-actions { gap: 10px; }
 body.home-page .home-hero-copy .hero-actions .btn { min-height: 40px; padding: 11px 16px; font-size: 9px; }
 body.home-page .home-hero-copy .hero-actions .btn.secondary { background: transparent; }
@@ -759,40 +824,40 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
 .home-speciality-band { padding: 28px 0; background: #fffdfa; }
 .speciality-band-grid { display: grid; grid-template-columns: 1.08fr 1fr 1fr; align-items: center; gap: 14px; }
 .speciality-band-heading { padding: 6px 26px 6px 0; }
-.speciality-band-heading h2 { max-width: 290px; margin: 10px 0 14px; color: var(--graphite); font: 500 clamp(31px,3.1vw,42px)/.98 'Cormorant Garamond',Georgia,serif !important; }
+.speciality-band-heading h2 { max-width: 290px; margin: 10px 0 14px; color: var(--graphite); font: 500 clamp(31px,3.1vw,42px)/.98 var(--font-display) !important; }
 .speciality-band-heading .text-link { font-size: 9px; }
 .speciality-tile { min-width: 0; overflow: hidden; border: 1px solid #eeeae2; background: #f7f3eb; box-shadow: 0 5px 15px #292d2b0a; transition: transform .22s,box-shadow .22s; }
 .speciality-tile:hover { transform: translateY(-3px); box-shadow: 0 10px 24px #292d2b12; }
 .speciality-tile>img { display: block; width: 100%; height: clamp(88px,9vw,122px); object-fit: cover; }
 .speciality-tile-copy { position: relative; min-height: 60px; display: flex; flex-direction: column; justify-content: center; gap: 3px; padding: 10px 42px 10px 13px; color: var(--graphite); }
-.speciality-tile-copy b { font: 700 10px Manrope,sans-serif; }
-.speciality-tile-copy small { color: #606861; font: 400 8px/1.45 Manrope,sans-serif; }
+.speciality-tile-copy b { font: 700 10px var(--font-ui); }
+.speciality-tile-copy small { color: #606861; font: 400 8px/1.45 var(--font-ui); }
 .speciality-tile-copy .tile-arrow { position: absolute; right: 10px; top: 50%; display: grid; width: 24px; height: 24px; place-items: center; border: 1px solid #d2d6cd; border-radius: 50%; color: var(--forest); transform: translateY(-50%); }
 
 .home-about-doctors { display: grid; grid-template-columns: 1.4fr .92fr 1.15fr; min-height: 310px; background: #f8f4ec; }
 .home-about-image { min-width: 0; min-height: 310px; overflow: hidden; }
 .home-about-image img { display: block; width: 100%; height: 100%; min-height: 350px; object-fit: cover; }
 .home-about-copy { align-self: center; padding: 28px clamp(22px,3vw,46px); border-right: 1px solid #d7d5cc; }
-.home-about-copy h2 { max-width: 330px; margin: 11px 0; color: var(--graphite); font: 500 clamp(32px,3.2vw,43px)/.96 'Cormorant Garamond',Georgia,serif !important; }
+.home-about-copy h2 { max-width: 330px; margin: 11px 0; color: var(--graphite); font: 500 clamp(32px,3.2vw,43px)/.96 var(--font-display) !important; }
 .home-about-copy p { margin: 9px 0; color: #3f4943; font-size: 9px; line-height: 1.7; }
 .home-about-copy .btn { min-height: 35px; margin-top: 7px; padding: 10px 14px; font-size: 8px; }
 .home-doctors-panel { align-self: center; min-width: 0; padding: 24px clamp(20px,3vw,40px); }
 .home-doctors-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
-.home-doctors-heading h2 { margin: 8px 0 0; color: var(--graphite); font: 500 clamp(27px,2.7vw,36px)/1 'Cormorant Garamond',Georgia,serif !important; }
+.home-doctors-heading h2 { margin: 8px 0 0; color: var(--graphite); font: 500 clamp(27px,2.7vw,36px)/1 var(--font-display) !important; }
 .home-doctors-heading>a { flex: 0 0 32px; display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid #e2ded4; border-radius: 50%; color: var(--forest); }
 .home-doctor-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .home-doctor-card { min-width: 0; padding: 10px; border: 1px solid #e9e5dc; background: #fffcf6; }
 .home-doctor-photo { display: grid; width: 78px; height: 78px; margin: 0 auto 8px; overflow: hidden; border-radius: 42% 42% 38% 38%; background: #e9e5dd; }
 .home-doctor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .home-doctor-info { display: flex; flex-direction: column; gap: 3px; }
-.home-doctor-info>b { color: var(--graphite); font: 700 8px/1.4 Manrope,sans-serif; }
+.home-doctor-info>b { color: var(--graphite); font: 700 8px/1.4 var(--font-ui); }
 .home-doctor-info>span { color: #505a53; font-size: 8px; }
 .home-doctor-info>small { min-height: 22px; margin-top: 2px; color: #68716a; font-size: 7px; line-height: 1.45; }
 .home-doctor-info>a { display: inline-flex; align-items: center; gap: 5px; margin-top: 3px; color: var(--forest); font-size: 8px; font-weight: 700; }
 
 .home-treatments { padding: 31px 0; background: #fffdfa; }
 .home-treatments .treatments-feature { display: grid; grid-template-columns: .82fr 2.18fr; align-items: center; gap: 24px; }
-.home-treatments .treatments-intro h2 { max-width: 340px; margin: 10px 0; color: var(--graphite); font: 500 clamp(32px,3.2vw,44px)/.97 'Cormorant Garamond',Georgia,serif !important; }
+.home-treatments .treatments-intro h2 { max-width: 340px; margin: 10px 0; color: var(--graphite); font: 500 clamp(32px,3.2vw,44px)/.97 var(--font-display) !important; }
 .home-treatments .treatments-intro p { max-width: 330px; margin: 0 0 12px; color: #4b554e; font-size: 9px; line-height: 1.7; }
 .home-treatments .treatments-intro .btn { min-height: 34px; padding: 9px 14px; font-size: 8px; }
 .treatment-image-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; }
@@ -800,18 +865,18 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
 .treatment-image-grid>a:hover { transform: translateY(-3px); box-shadow: 0 9px 20px #203c3616; }
 .treatment-image-grid img { display: block; width: 100%; height: clamp(100px,11vw,145px); object-fit: cover; transition: transform .45s; }
 .treatment-image-grid>a:hover img { transform: scale(1.035); }
-.treatment-image-grid b { display: block; padding: 10px 11px; color: var(--graphite); font: 700 8px Manrope,sans-serif; }
+.treatment-image-grid b { display: block; padding: 10px 11px; color: var(--graphite); font: 700 8px var(--font-ui); }
 
 .home-trust-reviews { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; border-top: 1px solid #e5e1d8; background: #f8f4ec; }
 .home-trust-panel, .home-testimonial-panel { padding: 26px clamp(24px,4vw,55px); }
 .home-trust-panel { border-right: 1px solid #d7d5cc; }
-.home-trust-panel h2, .home-testimonial-panel h2 { margin: 8px 0 18px; color: var(--graphite); font: 500 clamp(29px,3vw,40px)/1 'Cormorant Garamond',Georgia,serif !important; }
+.home-trust-panel h2, .home-testimonial-panel h2 { margin: 8px 0 18px; color: var(--graphite); font: 500 clamp(29px,3vw,40px)/1 var(--font-display) !important; }
 .home-trust-points { display: grid; grid-template-columns: repeat(4,1fr); }
 .home-trust-points>div { min-width: 0; min-height: 66px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 8px; padding: 0 10px; border-right: 1px solid #d7d5cc; }
 .home-trust-points>div:first-child { padding-left: 0; }
 .home-trust-points>div:last-child { padding-right: 0; border-right: 0; }
 .home-trust-points .site-icon { color: #68796b; font-size: 20px; }
-.home-trust-points b { color: #424c45; font: 500 8px/1.4 Manrope,sans-serif; }
+.home-trust-points b { color: #424c45; font: 500 8px/1.4 var(--font-ui); }
 .home-trust-note { max-width: 520px; margin-top: 23px; padding-top: 15px; border-top: 1px solid #d7d5cc; }
 .home-trust-note p { max-width: 480px; margin: 0 0 13px; color: #4c574f; font-size: 10px; line-height: 1.8; }
 .home-trust-note>div { display: flex; flex-wrap: wrap; gap: 18px; }
@@ -821,8 +886,8 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
 .testimonial-heading .text-link { flex: 0 0 auto; font-size: 8px; }
 .home-quote { margin-top: 15px; padding: 13px 0 0; border-top: 1px solid #d7d5cc; }
 .home-quote .review-stars { font-size: 15px; letter-spacing: .08em; }
-.home-quote blockquote { max-width: 580px; margin: 7px 0 9px; color: #3e4841; font: 400 17px/1.35 'Cormorant Garamond',Georgia,serif; }
-.home-quote>b { color: var(--graphite); font: 700 8px Manrope,sans-serif; }
+.home-quote blockquote { max-width: 580px; margin: 7px 0 9px; color: #3e4841; font: 400 17px/1.35 var(--font-display); }
+.home-quote>b { color: var(--graphite); font: 700 8px var(--font-ui); }
 .home-quote>b span { margin-left: 8px; color: #737a73; font-weight: 500; }
 .home-quote-secondary { margin-top: 10px; padding-top: 10px; border-top: 1px solid #d7d5cc; }
 .home-quote-secondary blockquote { margin-top: 5px; font-size: 14px; }
@@ -831,7 +896,7 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
 
 .home-patient-journey { padding: 38px 0; background: #fffdfa; }
 .home-patient-journey .journey-layout { grid-template-columns: .7fr 1.3fr; gap: 45px; }
-.home-patient-journey h2 { margin: 9px 0; color: var(--graphite); font: 500 34px/1 'Cormorant Garamond',Georgia,serif !important; }
+.home-patient-journey h2 { margin: 9px 0; color: var(--graphite); font: 500 34px/1 var(--font-display) !important; }
 .home-patient-journey p { font-size: 9px; line-height: 1.6; }
 .home-patient-journey .journey-steps { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); }
 .home-patient-journey .journey-steps li { padding: 14px 12px; border-right: 1px solid var(--line); border-bottom: 0; }
@@ -844,7 +909,7 @@ body.home-page .hero-controls .dot.active { width: 19px; background: var(--fores
 .home-gallery-grid { grid-template-rows: 125px 125px; gap: 9px; }
 .home-faq { padding: 40px 0; background: #fffdfa; }
 .home-faq-layout { grid-template-columns: .8fr 1.2fr; gap: 55px; }
-.home-faq-layout h2 { margin: 9px 0; color: var(--graphite); font: 500 36px/1 'Cormorant Garamond',Georgia,serif !important; }
+.home-faq-layout h2 { margin: 9px 0; color: var(--graphite); font: 500 36px/1 var(--font-display) !important; }
 .home-faq-layout>div>p { font-size: 9px; }
 .home-faq-layout .faq summary { padding: 13px 0; font-size: 9px; }
 .home-faq-layout .faq details p { font-size: 9px; }

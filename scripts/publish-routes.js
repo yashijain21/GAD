@@ -11,6 +11,6 @@ for (const route of routePages) {
   const output = resolve('dist', route.path, 'index.html');
   await mkdir(dirname(output), { recursive: true });
   const html = `<!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#30216f"><title>${route.title}</title><meta name="description" content="${route.description}"><meta property="og:type" content="website"><meta property="og:title" content="${route.title}"><meta property="og:description" content="${route.description}"><link rel="canonical" href="${site}/${route.path}"><link rel="stylesheet" href="${css}"></head><body><div id="app" class="block"></div><script type="module" src="${js}"></script></body></html>`;
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#30216f"><title>${route.title}</title><meta name="description" content="${route.description}"><meta property="og:type" content="website"><meta property="og:title" content="${route.title}"><meta property="og:description" content="${route.description}"><link rel="canonical" href="${site}/${route.path}/"><link rel="stylesheet" href="${css}"></head><body><div id="app" class="block"></div><script type="module" src="${js}"></script></body></html>`;
   await writeFile(output, html, 'utf8');
 }

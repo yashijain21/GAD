@@ -8,6 +8,8 @@ export const routePages = [
   { path: 'specialities/ivf-gynaecology', title: 'IVF & Gynaecology | GAD Clinics', description: 'Consultations for fertility, pregnancy and women’s health at GAD Clinics, Janakpuri.' },
   { path: 'reviews', title: 'Patient Reviews | GAD Clinics', description: 'Read patient experiences shared about GAD Clinics in Janakpuri, West Delhi.' },
   { path: 'treatments', title: 'Treatments | GAD Advanced Clinics', description: 'Explore orthopedic, IVF, fertility, gynaecology and pregnancy care at GAD Clinics.' },
+  { path: 'treatments/orthopedics', title: 'Orthopaedic Treatments | GAD Clinics', description: 'Explore orthopaedic consultations at GAD Clinics in Janakpuri, West Delhi.' },
+  { path: 'treatments/ivf', title: 'IVF & Gynaecology Treatments | GAD Clinics', description: 'Explore IVF, fertility and gynaecology consultations at GAD Clinics in Janakpuri, West Delhi.' },
   ...[
     'robotic-joint-replacement','knee-replacement','hip-replacement','fracture-management',
     'joint-pain-relief','arthroscopy','orthopedic-consultation','ivf-treatment','iui-treatment',
